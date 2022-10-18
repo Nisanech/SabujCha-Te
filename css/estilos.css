@@ -1,0 +1,135 @@
+/** Custom Propierties **/
+:root {
+    --fuenteTitulo: 'Playfair Display', serif;
+    --fuenteParrafo: 'Lora', serif;
+    --fuenteTituloProducto: 'Work Sans', sans-serif;
+
+    --colorPrincipal: #529F0F;
+    --gris: #575757;
+    --negro: #333333;    
+}
+
+/** Globales **/
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: var(--fuenteParrafo);
+    font-size: 1.6rem;
+    line-height: 1.8;
+}
+
+h1,
+h2 {
+    font-weight: 500;
+}
+
+h1 {
+    font-size: 5rem;
+}
+
+h2 {
+    font-size: 4rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+[class*="contenedor"] {
+    max-width: 120rem;
+    margin: 0 auto;
+    width: 90%;
+    background-color: #FFFFFF;
+}
+
+[class*="btn"] {
+    text-decoration: none;
+    text-align: center;
+    display: inline-block;
+    width: 100%;
+    padding: .5rem;
+    border-radius: .5rem;
+    border: 1px solid var(--colorPrincipal);
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin-top: .5rem;
+}
+
+/** Header **/
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 1rem 2.5rem;
+}
+
+@media (min-width: 992px) {
+    .header {
+        position: relative;
+        margin: 1rem 5rem;
+    }   
+}
+
+.navegacion {
+    display: none;
+}
+
+@media (min-width: 992px) {
+    .navegacion {
+        display: flex;
+        justify-content: space-around;
+        padding: 0;
+    }
+    
+    .navegacion__enlace {
+        margin: 0 1rem;
+        color: var(--negro);
+    }
+} 
+
+
+@media (min-width: 992px) {
+    .header__logo {
+        position: absolute;
+        right: calc(50% - 76px);
+    }
+}
+
+.tienda {
+    display: flex;
+    align-items: center;
+}
+
+.tienda__icono {
+    width: 2rem;
+    height: 2rem;
+    margin: 0 .5rem;
+}
+
+.tienda__icono--rotate {
+    display: none;
+}
+
+@media (min-width: 992px) {
+    .tienda__icono--rotate {
+        display: block;
+        transform: rotateY(180deg);
+    }
+
+    .tienda__icono--movil {
+        display: none;
+    }
+}
+
