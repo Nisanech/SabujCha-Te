@@ -150,6 +150,7 @@ img {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-bottom: 6rem;
 }
 
 .hero__titulo {
@@ -158,6 +159,13 @@ img {
     font-size: 3rem;
     max-width: 90%;
     color: #000000;
+}
+
+@media (min-width: 768px) {
+    .hero__titulo {
+        max-width: 50%;
+        font-size: 4rem;
+    }
 }
 
 @media (min-width: 992px) {
@@ -176,4 +184,85 @@ img {
     .hero__enlace {
         font-size: 1.2rem;
     }
+}
+
+/** Banner **/
+.banner {
+    width: 100%;
+    max-width: 90%;
+    height: 100%;
+}
+
+@media (min-width: 640px) {
+    .banner {
+        display: grid;
+        grid-template-columns: repeat(2, 50%);
+    }
+}
+
+@media (min-width: 992px) { 
+    .banner {
+        max-width: 80%;
+    }
+}
+
+.banner-card {
+    padding: 1rem;
+    margin: 0 0 4rem 0;
+    height: 15rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+}
+
+@media (min-width: 768px) { 
+    .banner-card {
+        padding-left: 2rem;
+    }
+}
+
+@media (min-width: 992px) { 
+    .banner-card {
+        height: 20rem;
+        margin: 0;
+    }
+}
+
+.banner-card:last-of-type {
+    margin: 0;
+}
+
+.banner-card--1,
+.banner-card--2 {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: scroll;
+}
+
+.banner-card--1 {
+    background-image: url(../img/banner-1.png);
+}
+
+@media (min-width: 640px) { 
+    .banner-card--1 {
+        margin-right: 2rem;
+    }
+}
+
+.banner-card--2 {
+    background-image: url(../img/banner-2.png);
+}
+
+.banner-card__descuento {
+    margin: 0;
+    color: var(--colorPrincipal);
+    font-size: 3rem;
+}
+
+.banner-card__nombre {
+    margin: 0;
+    font-family: var(--fuenteTituloProducto);
+    text-transform: uppercase;
+    font-size: 1.4rem;
 }
