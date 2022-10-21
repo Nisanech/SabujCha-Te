@@ -885,6 +885,10 @@ img {
     align-items: center;
 }
 
+.enlaces {
+    background-color: transparent;
+}
+
 @media (min-width: 640px) { 
     .enlaces {
         display: grid;
@@ -898,7 +902,6 @@ img {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         align-items: start;
-        background-color: transparent;
     }
 }
 
