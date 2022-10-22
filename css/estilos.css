@@ -192,12 +192,21 @@ img {
     margin-bottom: 6rem;
 }
 
+.hero--producto {
+    background-image: url(../img/slider-1.webp);
+    height: 30rem;
+}
+
 .hero__titulo {
     text-align: center;
     line-height: 1.2;
     font-size: 3rem;
     max-width: 90%;
     color: #000000;
+}
+
+.hero__titulo--producto {
+    color: #FFFFFF;
 }
 
 @media (min-width: 768px) {
@@ -223,6 +232,18 @@ img {
     .hero__enlace {
         font-size: 1.2rem;
     }
+}
+
+.breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+.breadcrumb__enlace {
+    color: #FFFFFF;
+    font-weight: 400;
+    text-decoration: none;
 }
 
 /** Banner **/
