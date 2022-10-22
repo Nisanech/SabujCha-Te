@@ -622,9 +622,31 @@ img {
     grid-template-columns: 1fr;
 }
 
+@media (min-width: 992px) { 
+    .producto-info {
+        grid-template-columns: repeat(2, 50%);
+        align-items: center;
+        gap: 2rem;
+    }
+}
+
+/* Producto */
 .producto-info__card {
     margin: 0;
     border: 1px solid #E9E9E9;
+}
+
+@media (min-width: 480px) { 
+    .producto-info__card {
+        max-width: 50%;
+        margin: 0 auto;
+    }
+}
+
+@media (min-width: 992px) { 
+    .producto-info__card {
+        max-width: 80%;
+    }
 }
 
 .producto-info__off {
@@ -636,6 +658,7 @@ img {
     margin: 0 auto;    
 }
 
+ /* Producto Slider */
 .productos-slider {
     padding: 0;
     margin: 0;
@@ -682,6 +705,7 @@ img {
     100% { margin-left: -95%; }
 }
 
+/* Textos producto */
 .textos-producto__nombre {
     margin: 0;
     font-family: var(--fuenteTituloProducto);
@@ -698,6 +722,7 @@ img {
     }
 }
 
+/* Calificación */
 .calificacion {
     margin-top: 1rem;
     max-width: 25%;
@@ -708,6 +733,206 @@ img {
 .calificacion__icono {
     width: 1.5rem;
 }
+
+/* Reviews */
+.reviews {
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.reviews__texto-cantidad {
+    position: relative;
+    margin: 0 2rem 0 0;
+}
+
+.reviews__texto-cantidad::before {
+    content: '';
+    height: 2rem;
+    width: 2px;
+    background-color: #E9E9E9;
+    position: absolute;
+    top: 2px;
+    right: -21px;
+}
+
+.reviews__texto {
+    margin: 0 0 0 2rem;
+    text-transform: capitalize;
+}
+
+/* Descripción */
+.descripcion {
+    text-align: left;
+    font-size: 1.4rem;
+}
+
+.descripcion__precio {
+    font-size: 2rem;
+    margin: .5rem 0 0 0;
+}
+
+.descripcion__disponible {
+    margin: .5rem 0 0 0;
+}
+
+.descripcion__disponible span {
+    color: var(--colorPrincipal);
+}
+
+.descripcion__texto {
+    margin: .5rem 0 0 0;
+    text-align: left;
+    font-size: 1.4rem;
+}
+
+/* Check-list */
+.check-list {
+    margin-top: 2rem;
+    position: relative;
+}
+
+.check-list::after {
+    content: '';
+    height: .2rem;
+    width: 100%;
+    background-color: #E9E9E9;
+    position: absolute;
+    bottom: -3rem;
+}
+
+.check-list__input {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.check-list__label {
+    font-size: 1.3rem;
+    text-transform: capitalize;
+}
+
+.check-list__label span {
+    color: var(--colorPrincipal);
+}
+
+/* Cantidad */
+.cantidad {
+    margin-top: 6rem;
+    display: flex;
+    align-items: center;
+}
+
+.cantidad input {
+    margin: 0 1rem 0 0;
+    width: 4rem;
+    height: 4rem;
+    text-align: center;
+    border: 1px solid #E9E9E9;
+}
+
+.cantidad__label {
+    margin-right: 2rem;
+}
+
+.cantidad__btn {
+    margin: 0 1rem;
+    width: 4rem;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #E9E9E9;
+}
+
+.cantidad__btn:hover {
+    background-color: var(--colorPrincipal);
+}
+
+.cantidad__btn img {
+    width: 2rem;
+}
+
+.cantidad__btn--blanco img {
+    filter: invert(100%);
+}
+
+.cantidad__btn--negro img:hover {
+    filter: invert(100%);
+}
+
+/* Categorias */
+.categorias {
+    margin-top: 4rem;
+}
+
+.categorias__texto {
+    text-align: left;
+    margin: 0;
+    line-height: 2.5;
+}
+
+/* Redes */
+.redes {
+    margin-top: 4rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5rem;
+}
+
+@media (min-width: 1024px) { 
+    .redes {
+        flex-wrap: nowrap;
+    }
+}
+
+.redes__enlace {
+    width: 30%;
+    padding: .5rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #E9E9E9;
+    text-decoration: none;
+}
+
+.redes__enlace--twitter {
+    border: 1px solid #00AAF0;
+    background-color: #00AAF0;
+}
+
+.redes__enlace--facebook {
+    border: 1px solid #435F9F;
+    background-color: #435F9F;
+}
+
+.redes__enlace--google {
+    border: 1px solid #E04B34;
+    background-color: #E04B34;
+}
+
+.redes__enlace--pinterest {
+    margin-top: .5rem;
+    border: 1px solid #CE1F21;
+    background-color: #CE1F21;
+}
+
+@media (min-width: 1024px) { 
+    .redes__enlace--pinterest {
+        margin-top: 0;
+    }
+}
+
+.redes__icono {
+    width: 1.5rem;
+    filter: invert(100%);
+}
+
+.redes__nombre {
+    margin: 0 0 0 .5rem;
+    color: #FFFFFF;
+}
+
 /** Newsletter **/
 .newsletter {
     background-image: url(../img/bg-2.jpg);
