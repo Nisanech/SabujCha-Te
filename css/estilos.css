@@ -620,6 +620,7 @@ img {
 .producto-info {
     display: grid;
     grid-template-columns: 1fr;
+    padding: 2rem 0;
 }
 
 @media (min-width: 992px) { 
@@ -880,9 +881,10 @@ img {
     gap: .5rem;
 }
 
-@media (min-width: 1024px) { 
+@media (min-width: 768px) { 
     .redes {
         flex-wrap: nowrap;
+        gap: 1rem;
     }
 }
 
@@ -894,6 +896,18 @@ img {
     justify-content: center;
     border: 1px solid #E9E9E9;
     text-decoration: none;
+}
+
+@media (min-width: 768px) { 
+    .redes__enlace {
+        width: 15%;
+    }
+}
+
+@media (min-width: 1024px) { 
+    .redes__enlace {
+        width: 20%;
+    }
 }
 
 .redes__enlace--twitter {
@@ -917,7 +931,7 @@ img {
     background-color: #CE1F21;
 }
 
-@media (min-width: 1024px) { 
+@media (min-width: 768px) { 
     .redes__enlace--pinterest {
         margin-top: 0;
     }
@@ -931,6 +945,109 @@ img {
 .redes__nombre {
     margin: 0 0 0 .5rem;
     color: #FFFFFF;
+}
+
+/* Descripción del Producto */
+.descripcion-producto {
+    margin-top: 3rem;
+    padding: 2rem 0;
+    position: relative;
+}
+
+.tabs {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.tabs::after {
+    content: '';
+    height: .2rem;
+    width: 100%;
+    background-color: #E9E9E9;
+    position: absolute;
+    top: 5.5rem;
+}
+
+@media (min-width: 768px) { 
+    .tabs {
+        gap: 5rem;
+    }
+
+    .tabs::after {
+        top: 5.9rem;
+    }
+}
+
+.tabs__heading {
+    font-size: 1.7rem;
+    padding-bottom: 1.5rem;
+    cursor: pointer;
+}
+
+@media (min-width: 768px) { 
+    .tabs__heading {
+        font-size: 2rem;
+    }
+}
+
+.tabs__heading:first-of-type {
+    color: var(--colorPrincipal);
+    border-bottom: 2px solid var(--colorPrincipal);
+    z-index: 1;
+}
+
+.descripcion-producto__texto {
+    margin: 3rem 0;
+    text-align: left;
+    line-height: 2.2;
+}
+
+.descripcion-producto__texto--lista {
+    margin-bottom: 0;
+    padding: 0;
+}
+
+.descripcion-producto__texto--lista li {
+    list-style: none;
+}
+
+/* Related Products */
+.related-products {
+    margin-top: 3rem;
+    padding: 2rem 0;
+    display: block;
+    text-align: center;
+}
+
+.related-products__heading {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 2rem;
+}
+
+.related-products__heading::after {
+    content: '';
+    background-color: var(--negro);
+    height: 1px;
+    left: 0;
+    position: absolute;
+    bottom: -2px;
+    width: 100%;
+    z-index: 1;
+}
+.card-producto--border img {
+    border: 1px solid #E9E9E9;
+}
+
+.escritorio {
+    display: none;
+}
+
+@media (min-width: 640px) { 
+    .escritorio {
+        display: block;
+    }
 }
 
 /** Newsletter **/
